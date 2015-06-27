@@ -1,4 +1,4 @@
 /**
  * Exports {%= name %} main library
  */
-module.exports = require('./lib/{%= name %}.js');
+module.exports = require('./lib/{%= name %}');
