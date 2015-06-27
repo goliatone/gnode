@@ -10,7 +10,7 @@
 
 var extend = require('gextend');
 var _inherit = require('util').inherits;
-var EvenEmitter = require('events').EvenEmitter;
+var EventEmitter = require('events').EventEmitter;
 
 
 var DEFAULTS = {
@@ -18,13 +18,13 @@ var DEFAULTS = {
 };
 
 function {%= js_test_safe_name %}(config){
-    EvenEmitter.call(this);
+    EventEmitter.call(this);
     config = extend({}, this.constructor.DEFAULTS, config);
 
     if(config.autoinitialize ) this.init(config);
 }
 
-_inherit({%= js_test_safe_name %}, EvenEmitter);
+_inherit({%= js_test_safe_name %}, EventEmitter);
 
 {%= js_test_safe_name %}.DEFAULTS = DEFAULTS;
 
