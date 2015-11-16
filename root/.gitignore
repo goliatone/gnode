@@ -41,5 +41,20 @@ Icon
 .Trashes
 
 
-## Project related files
-*/config.lua
+### https://raw.github.com/github/gitignore/6c75292e1e06f78707dc7fe1d2c7b1130f3c8706/Node.gitignore
+
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+pids
+logs
+results
+
+npm-debug.log
+node_modules
