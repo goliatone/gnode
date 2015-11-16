@@ -2,7 +2,6 @@
  * grunt-init-node
  * https://gruntjs.com/
  *
- * Copyright (c) 2012 "Cowboy" Ben Alman, contributors
  * Licensed under the MIT license.
  */
 
@@ -46,22 +45,26 @@ exports.template = function(grunt, init, done) {
     props.keywords = [];
 
     props.devDependencies = {
-      "mocha-sinon": "^1.1.4",
-      "chai": "^2.2.0",
-      "sinon": "^1.14.1",
-      "mocha": "^2.2.4",
+      'mocha-sinon': '^1.1.4',
+      'chai': '^2.2.0',
+      'sinon': '^1.14.1',
+      'mocha': '^2.2.4',
     };
 
     props.dependencies = {
-      "gextend": "^0.1.6"
+      'gextend': '^0.1.6',
+      'yargonaut': '^1.1.2',
+      'yargs': '^3.30.0'
     };
 
     props.main = 'index';
 
     props.scripts = {
-      "test": "./node_modules/mocha/bin/mocha test/*_test.js",
-      "dtest": "./node_modules/mocha/bin/mocha test/*_test.js -G -w --reporter spec --slow 500"
-    }
+        'test': './node_modules/mocha/bin/mocha test/*_test.js',
+        'dtest': './node_modules/mocha/bin/mocha test/*_test.js -G -w --reporter spec --slow 500'
+    };
+
+    props.bin = 'bin/' + props.name;
 
     // Files to copy (and process).
     var files = init.filesToCopy(props);
