@@ -31,6 +31,7 @@ exports.template = function(grunt, init, done) {
   init.process({type: 'node'}, [
     // Prompt for these values.
     init.prompt('name'),
+    init.prompt('title'),
     init.prompt('description'),
     init.prompt('version'),
     init.prompt('repository'),
